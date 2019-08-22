@@ -1,51 +1,12 @@
-<!DOCTYPE html>
-{% load static %}
-<html>
-    <head>
-        <title>Zahrah's blog</title>
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-        <link rel="stylesheet"	href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css" >
-        <link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext"	rel="stylesheet" type="text/css">
-        <link rel="stylesheet" href="{% static 'css/blog.css' %}">
-    </head>
-    <body>
-        <div class="page-header">
-                <h1><a href="http://zahrah.pythonanywhere.com">Zahrah's Blog</a></h1>
-        </div>
-        
 
-        <div	class="content	container">		
-            <div	class="row">	
-				<div	class="col-md-8">					
-                     {%	for	post	in	posts	%}					
-                        <div	class="post">	
-        					<div	class="date">	
-                                <p>published:	{{	post.published_date	}}</p>						
-                            </div>						
-                            <h2><a	href="">{{	post.title	}}</a></h2>			
-                             <p>{{	post.text|linebreaksbr	}}</p>							
-                         </div>							
-                    {%	endfor	%}						
-                </div>				
-             </div>
-        </div>
-
-        
-
-
-
-
-<!-- <div>
-            <p>published :07/08/2019, 4:05</p>
-            <h2><a href="">Pycon Africa</a></h2>
-            <p>The long awaited first ever PAN Africa event is here now! Participants are so overwelmed with the activities, workshops and the food. :)</p>
-        </div>
-
-        <div>
-                <p>published :07/08/2019, 4:20</p>
-                <h2><a href="">First BlogSite</a></h2>
-                <p>The long awaited first ever PAN Africa event is here now! Participants are so overwelmed with the activities, workshops and the food. :)</p>
-            </div>
-        -->
-    </body>
-</html>
+    					
+{%	for	post	in	posts	%}					
+    <div	class="post">	
+        <div	class="date">	
+            <p>published:	{{	post.published_date	}}</p>						
+        </div>						
+        <h2><a	href="">{{	post.title	}}</a></h2>			
+        <p>{{	post.text|linebreaksbr	}}</p>							
+    </div>							
+{%	endfor	%}						
+               
